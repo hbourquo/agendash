@@ -24,6 +24,20 @@ To save the logs, add the following code:
       }
     }
   });
+  
+  
+  const saveResults = (job, result) => {
+    job.attrs.result.push({ exectionTime: Date(), output: result });
+  };
+  
+  
+  agenda.define('jobname', {...jobConfig, shouldSaveResult: true}, async (job) => {
+      /* ... execute the job logic */
+      
+      // then save the results
+      saveResults(job, result);
+  });
+  
 ```
 
 ---
