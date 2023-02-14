@@ -200,9 +200,20 @@ const app = Vue.component("app", {
       <div class="">
         <div class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
           <div class="d-flex">
+             <!-- BEGIN updating title from options -->
+             <!--div>             
+              <a class="navbar-brand col-sm-10 col-md-10 mr-0 tittle"> Agendash</a>                            
+             </div-->
+      
             <div>
-              <a class="navbar-brand col-sm-10 col-md-10 mr-0 tittle"> Agendash</a>
+            <a class="navbar-brand col-sm-10 col-md-10 mr-0 tittle"> {{this.title}}</a>
             </div>
+            <div>
+              <a href="/logout">Logout</a>
+            </div>           
+
+            <!-- END updating title from options -->
+            
             <div class='d-md-none w-50'>
               <div id="mySidebar" class="sidebar-collapse" @click="closeNav()">
                 <a href="javascript:void(0)" class="closebtn" @click="closeNav()">&times;</a>
