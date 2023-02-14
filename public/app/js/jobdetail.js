@@ -13,7 +13,12 @@ const jobDetail = Vue.component("job-detail", {
   template: `
   <div class="modal fade" id="modalData" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <!-- Modal -->
-    <div class="modal-dialog" role="document">
+        <!-------------------------------->
+        <!-- BEGIN  Fullscreen modal -->
+        <div class="modal-dialog" style="max-width:99%;" role="document">
+        <!--div class="modal-dialog" role="document"-->
+        <!-- END  Fullscreen modal -->
+        <!-------------------------------->
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Job Data - {{job.job.name}}</h5>
@@ -30,6 +35,14 @@ const jobDetail = Vue.component("job-detail", {
         </div>
         <p><strong>Metadata: </strong></p>
         <prism-editor class="json-editor" :lineNumbers="true" :readonly="true" :code="job.job.data | formatJSON" language="json"></prism-editor>
+        
+          <!----------------------------------->
+          <!-- BEGIN Display job results -->
+          <p><strong>Job outout: </strong></p>
+          <prism-editor class="" :lineNumbers="true" :readonly="true" :code="job.job.result | formatJSON" language="json"></prism-editor>
+          <!-- END Display job results -->
+          <!----------------------------------->
+        
         <div v-if='job.failed' class="row mt-3">
           <div class="col pt-3 bg-danger text-light">
               <p><strong>Fail Count:</strong> {{job.job.failCount}}</p>
