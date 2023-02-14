@@ -6,6 +6,9 @@ with some bug fixes/additions
 2) Display logs in in fullscreen
 3) Fix Error 500 when authentication fails
 4) Fix Mongo ObjectId error
+
+![See X last logs in the webscreen](agendash-X-outputs.png)
+
 ---
 
 ### Features
