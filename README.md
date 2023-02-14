@@ -9,6 +9,23 @@ with some bug fixes/additions
 
 ![See X last logs in the webscreen](agendash-X-outputs.png)
 
+To save the logs, add the following code:
+
+```js
+  const MAX_LOG = 100;
+
+  agenda.on("start", (job) => {
+    if (!job.attrs.result) {
+      job.attrs.result = [];
+    } else {
+      const maxLog = job.attrs.data.maxLog ? job.attrs.data.maxLog : MAX_LOG;
+      if (job.attrs.result.length >= maxLog) {
+        job.attrs.result = job.attrs.result.slice(1);
+      }
+    }
+  });
+```
+
 ---
 
 ### Features
