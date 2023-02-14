@@ -199,9 +199,12 @@ const app = Vue.component("app", {
     <div class="container-fluid">
       <div class="">
         <div class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-          <div class="d-flex">
-             <!-- BEGIN updating title from options -->
-             <!--div>             
+        
+          
+             <!-- BEGIN updating title from options and showing logout link -->
+             <div class="d-flex" style="justify-content: space-between;width: 100%;align-items: center;padding: 0 7px;">
+             <!--div class="d-flex">
+             <div>             
               <a class="navbar-brand col-sm-10 col-md-10 mr-0 tittle"> Agendash</a>                            
              </div-->
       
@@ -209,10 +212,10 @@ const app = Vue.component("app", {
             <a class="navbar-brand col-sm-10 col-md-10 mr-0 tittle"> {{this.title}}</a>
             </div>
             <div>
-              <a href="/logout">Logout</a>
+              <a class="btn btn-sm btn-warning" href="/logout">Logout</a>
             </div>           
 
-            <!-- END updating title from options -->
+            <!-- END updating title from options and showing logout link -->
             
             <div class='d-md-none w-50'>
               <div id="mySidebar" class="sidebar-collapse" @click="closeNav()">
