@@ -14,6 +14,7 @@ To save the logs, add the following code:
 ```js
   const MAX_LOG = 100;
 
+  // rolling log on job start
   agenda.on("start", (job) => {
     if (!job.attrs.result) {
       job.attrs.result = [];
@@ -25,12 +26,12 @@ To save the logs, add the following code:
     }
   });
   
-  
+  // save log function
   const saveResults = (job, result) => {
     job.attrs.result.push({ exectionTime: Date(), output: result });
   };
   
-  
+  // always save results
   agenda.define('jobname', {...jobConfig, shouldSaveResult: true}, async (job) => {
       /* ... execute the job logic */
       
