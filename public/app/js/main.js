@@ -143,6 +143,12 @@ const app = Vue.component("app", {
             this.object = object;
             this.overview = data.overview;
             this.loading = false;
+            
+            /* BEGIN updating title from options */
+            this.title = data.title;
+            window.document.title = this.title;
+            /* END updating title from options */
+            
           },
           () => {
             this.loading = false;
