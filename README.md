@@ -2,9 +2,10 @@
 
 A Dashboard for [Agenda](https://github.com/agenda/agenda).
 with some bug fixes/additions
-1) Fix Error 500 when authentication fails
-2) Fix Mongo ObjectId error
-3) Storing and displaying X number of last runs outputs. Use the metadata parameter "maxLog" (integer) to save and display the last results of the corresponding number of runs
+1) Storing and displaying X number of last runs outputs. Use the metadata parameter "maxLog" (integer) to save and display the last results of the corresponding number of runs
+2) Display logs in in fullscreen
+3) Fix Error 500 when authentication fails
+4) Fix Mongo ObjectId error
 ---
 
 ### Features
